@@ -1,0 +1,59 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2024-08-22 16:11:34.319889",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "delet",
+  "start",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "delet",
+   "fieldtype": "Table",
+   "label": "delet",
+   "options": "delet"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "NEW-TAB-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Table",
+   "label": "start",
+   "options": "start"
+  }
+ ],
+ "modified": "2024-08-23 15:49:06.004578",
+ "modified_by": "Administrator",
+ "module": "Manufacturing",
+ "name": "new",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

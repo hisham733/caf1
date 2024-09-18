@@ -1,0 +1,196 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2024-09-09 08:54:07.937785",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stock_entry",
+  "work_order",
+  "column1",
+  "posting_date",
+  "section1",
+  "source_warehouse",
+  "column2",
+  "target_warehouse",
+  "item_section",
+  "items",
+  "balance",
+  "section2",
+  "production_name",
+  "stock_entry_production",
+  "cost_qty",
+  "column3",
+  "cost",
+  "cost_after_division",
+  "trak_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "column1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "stock_entry.work_order",
+   "fieldname": "work_order",
+   "fieldtype": "Data",
+   "label": "Work Order"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "stock_entry.from_warehouse",
+   "fieldname": "source_warehouse",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Source Warehouse "
+  },
+  {
+   "bold": 1,
+   "default": "reject  - CAF",
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse ",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "stock_entry.items",
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Stock Entry Detail"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Float",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "section2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Balance QTY",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "Balance-.YYYY.-"
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Total Outgoing Value",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "cost_qty",
+   "fieldtype": "Float",
+   "label": "Quantity",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "stock_entry.id",
+   "fieldname": "trak_id",
+   "fieldtype": "Data",
+   "label": "ID",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "cost_after_division",
+   "fieldtype": "Currency",
+   "label": "Balance Cost Value",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "stock_entry_production",
+   "fieldtype": "Link",
+   "label": "Production Stock Entry ",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "production_name",
+   "fieldtype": "Data",
+   "label": "Production Item",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2024-09-10 16:01:34.470270",
+ "modified_by": "Administrator",
+ "module": "Manufacturing",
+ "name": "Balance QTY",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

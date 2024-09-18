@@ -1,0 +1,60 @@
+{
+ "autoname": "hash",
+ "creation": "2016-02-10 05:09:11.983251",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "material_request",
+  "id",
+  "col_break1",
+  "material_request_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "material_request",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Material Request",
+   "oldfieldname": "prevdoc_docname",
+   "oldfieldtype": "Data",
+   "options": "Material Request",
+   "print_width": "150px",
+   "reqd": 1,
+   "width": "150px"
+  },
+  {
+   "fieldname": "col_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "material_request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Material Request Date",
+   "oldfieldname": "document_date",
+   "oldfieldtype": "Date",
+   "print_width": "120px",
+   "read_only": 1,
+   "width": "120px"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fetch_from": "material_request.id",
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID"
+  }
+ ],
+ "istable": 1,
+ "modified": "2024-08-24 08:33:45.027860",
+ "modified_by": "Administrator",
+ "module": "Manufacturing",
+ "name": "Production Plan Material Request",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "ASC"
+}
